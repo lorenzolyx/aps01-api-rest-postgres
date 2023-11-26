@@ -12,7 +12,6 @@ poetry add fastapi
 poetry add sqlmodel
 poetry add uvicorn
 poetry add psycopg2-binary
-
 '''
 
 ##Iniciando o servidor de HTTP
