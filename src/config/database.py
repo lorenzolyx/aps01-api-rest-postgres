@@ -1,7 +1,8 @@
 from contextlib import contextmanager
+from sqlmodel import SQLModel, Session, create_engine
 
 
-# sqlite_filename = "database.db"
+# sqlite_filename = "database.db"'
 # connect_args = {"check_same_thread": False}
 # db_url = f"sqlite:///{sqlite_filename}"
 
@@ -13,6 +14,7 @@ PG_DATABASE = "oficina"
 
 connect_args = {}
 db_url = f"postgresql://{PG_USERNAME}:{PG_PASSWORD}@{PG_HOST}:{PG_PORT}/{PG_DATABASE}"
+
 
 engine = create_engine(db_url, echo=True, connect_args=connect_args)
 
@@ -26,3 +28,4 @@ def get_engine():
 @contextmanager
 def get_session():
     yield Session(engine)
+    

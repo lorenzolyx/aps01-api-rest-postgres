@@ -14,7 +14,7 @@ poetry add uvicorn
 poetry add psycopg2-binary
 '''
 
-##Iniciando o servidor de HTTP
+## Iniciando o servidor de HTTP
 
 '''shell
 uvicorn src.server:app -- reload
